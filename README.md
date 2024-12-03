@@ -1,29 +1,9 @@
 
-# ts-easy 🛠️
-
-**ts-easy** is your minimalist TypeScript starter for Node.js projects. No fluff, just the essentials to get you up and running with TypeScript, ESLint, Prettier, and more. Perfect for initiating any TypeScript project, whether it's a CLI tool, library, or something entirely different.
-
-## Features ✨
-
-- **TypeScript**: Strongly typed JavaScript for the win.
-- **ESLint**: Keep your code clean and consistent.
-- **Prettier**: Automatic code formatting to keep everything looking sharp.
-- **VSCode Settings**: Optimized workspace settings out of the box.
-- **pnpm**: Fast, disk space-efficient package manager.
-- **ts-node-dev**: Instant feedback with autoreload on save.
-- **tsup**: Super fast TypeScript bundler.
-- **Zod**: Type-safe schema validation made easy.
+# Typescript advent of code 2024 🛠️
 
 ## Getting Started 🚀
 
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/yourusername/ts-easy.git
-cd ts-easy
-```
-
-### 2. Install Dependencies
+### 1. Install Dependencies
 
 Make sure you have pnpm installed. Then, run:
 
@@ -31,7 +11,7 @@ Make sure you have pnpm installed. Then, run:
 pnpm install
 ```
 
-### 3. Start Developing
+### 2. Start Developing
 
 Kickstart your development with autoreload on save:
 
@@ -39,7 +19,7 @@ Kickstart your development with autoreload on save:
 pnpm dev
 ```
 
-### 4. Build for Production
+### 3. Build for Production
 
 Ready to ship? Build your project with:
 
@@ -52,22 +32,24 @@ pnpm build
 ```bash
 ts-easy/
 ├── src/
-│   └── main.ts      	# Entry point for your TypeScript project
+│   day-one
+│   └── main.ts
+│   day-two
+│   └── main.ts
 ├── .vscode/
-│   └── settings.json 	# VSCode workspace settings
-│   └── extensions.json # Recommended VSCode extensions
-├── eslint.config.mjs   # ESLint configuration
-├── build.ts      	# Build configurations for tsup
-├── .prettierrc      	# Prettier configuration
-├── tsconfig.json    	# TypeScript configuration
-├── package.json     	# Project metadata and scripts
-└── pnpm-lock.yaml   	# Dependency lockfile
+│   └── settings.json 
+│   └── extensions.json
+├── eslint.config.mjs
+├── .prettierrc 
+├── tsconfig.json
+├── package.json
+└── pnpm-lock.yaml
 ```
 
 ### Scripts 📝
 
-* **pnpm dev:** Run your project with autoreload.
 * **pnpm start:** Run your build.
+* **pnpm run-day:** Build and run advent of code of the day
 * **pnpm lint:** Lint your TypeScript code using ESLint.
 * **pnpm lint:fix:** Lint and fix your TypeScript code using ESLint.
 * **pnpm format:** Format your code with Prettier.
