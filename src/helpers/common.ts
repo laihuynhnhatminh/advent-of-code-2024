@@ -18,7 +18,7 @@ export function runSolutionWithPerformance(fn: Function): void {
     '\x1b[0m',
     '\x1b[30m',
     '\x1b[44m',
-    `Solution ran for: ${endTimer - startTimer}`,
+    `Solution ran for: ${endTimer - startTimer} miliseconds`,
     '\x1b[0m',
   );
   console.log('\x1b[0m', '\x1b[30m', '\x1b[44m', `Result: ${res}`, '\x1b[0m');
@@ -73,7 +73,7 @@ export function runSolutionWithPerformanceForLoops(
       '\x1b[0m',
       '\x1b[30m',
       '\x1b[44m',
-      `Solution ran for: ${endTimer - startTimer}`,
+      `Solution ran for: ${endTimer - startTimer} miliseconds`,
       '\x1b[0m',
     );
     console.log('\x1b[0m', '\x1b[30m', '\x1b[44m', `Result: ${res}`, '\x1b[0m');
@@ -85,7 +85,7 @@ export function runSolutionWithPerformanceForLoops(
     '\x1b[0m',
     '\x1b[30m',
     '\x1b[44m',
-    `Average time: ${totalTime / loop}`,
+    `Average time: ${totalTime / loop} miliseconds`,
     '\x1b[0m',
   );
 }

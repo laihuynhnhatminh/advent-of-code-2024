@@ -13,20 +13,11 @@ Make sure you have pnpm installed. Then, run:
 pnpm install
 ```
 
-### 2. Start Developing
-
-Kickstart your development with autoreload on save:
+### 2. Run advent of code
 
 ```bash
-pnpm dev
-```
-
-### 3. Build for Production
-
-Ready to ship? Build your project with:
-
-```bash
-pnpm build
+pnpm run-day day-1
+pnpm run-day day-2
 ```
 
 ### Project Structure 📁
