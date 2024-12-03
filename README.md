@@ -3,6 +3,8 @@
 
 ## Getting Started 🚀
 
+Make sure you import your own data.ts for each solution.
+
 ### 1. Install Dependencies
 
 Make sure you have pnpm installed. Then, run:
