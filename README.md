@@ -30,7 +30,7 @@ pnpm build
 ### Project Structure 📁
 
 ```bash
-ts-easy/
+advent-of-code-2024/
 ├── src/
 │   day-one
 │   └── main.ts
@@ -54,12 +54,6 @@ ts-easy/
 * **pnpm lint:fix:** Lint and fix your TypeScript code using ESLint.
 * **pnpm format:** Format your code with Prettier.
 * **pnpm build:** Bundle your project using tsup.
-
-### Why ts-easy? 🤔
-
-* **Minimal:** Just the essentials, no bloat.
-* **Flexible:** Use it for any TypeScript-based project.
-* **Modern:** Includes the latest and greatest tools like tsup and Zod.
 
 ### License 📄
 
