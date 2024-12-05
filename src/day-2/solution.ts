@@ -1,7 +1,13 @@
-import { splitMatrix } from './utils';
+import { DATA } from './data';
 
 const MIN_DIFF = 1;
 const MAX_DIFF = 3;
+
+function splitMatrix(): number[][] {
+  return DATA.trim()
+    .split(/\n/)
+    .map((line) => line.split(/\s+/).filter(Boolean).map(Number));
+}
 
 function isSafeReportsWithTolerate(
   arr: number[],
