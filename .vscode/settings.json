@@ -3,6 +3,5 @@
   "typescript.preferences.importModuleSpecifier": "relative",
   "git.ignoreLimitWarning": true,
   "prettier.useEditorConfig": false,
-  "totalTypeScript.hideAllTips": true,
   "typescript.tsdk": "node_modules/typescript/lib",
 }

@@ -1,3 +1,9 @@
+/**
+ * Run a solution with performance timer
+ *
+ * @export
+ * @param {Function} fn
+ */
 export function runSolutionWithPerformance(fn: Function): void {
   console.log(
     '\x1b[0m',
@@ -24,6 +30,15 @@ export function runSolutionWithPerformance(fn: Function): void {
   console.log('\x1b[0m', '\x1b[30m', '\x1b[44m', `Result: ${res}`, '\x1b[0m');
 }
 
+/**
+ * Run a solution with performance for a number of loops
+ * and warm up loops to get over the JIT compilation
+ *
+ * @export
+ * @param {Function} fn
+ * @param {number} loop
+ * @param {number} [warmUpLoop]
+ */
 export function runSolutionWithPerformanceForLoops(
   fn: Function,
   loop: number,

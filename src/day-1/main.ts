@@ -1,6 +1,5 @@
-import { solutionPart1 } from './solution-part-1';
+import { solutionPart1, solutionPart2 } from './solution';
 import { runSolutionWithPerformanceForLoops } from '../helpers/common';
-import { solutionPart2 } from './solution-part-2';
 
 // Solution for part 1
 runSolutionWithPerformanceForLoops(solutionPart1, 20, 5);
