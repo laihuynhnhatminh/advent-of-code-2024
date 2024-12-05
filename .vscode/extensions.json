@@ -1,6 +1,5 @@
 {
   "recommendations": [
-    "mattpocock.ts-error-translator",
     "yoavbls.pretty-ts-errors",
     "esbenp.prettier-vscode",
     "dbaeumer.vscode-eslint",
