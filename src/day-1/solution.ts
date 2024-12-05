@@ -1,4 +1,4 @@
-import { splitColumns } from './commons';
+import { splitColumns } from './utils';
 
 export function solutionPart1(): number {
   const { column1, column2 } = splitColumns();

@@ -1,4 +1,4 @@
-import { splitMatrix } from './commons';
+import { splitMatrix } from './utils';
 
 const MIN_DIFF = 1;
 const MAX_DIFF = 3;

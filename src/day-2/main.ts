@@ -1,4 +1,4 @@
-import { runSolutionWithPerformanceForLoops } from '../helpers/common';
+import { runSolutionWithPerformanceForLoops } from '../utils';
 import { solutionPart1, solutionPart2 } from './solution';
 
 // Solution for part 1
