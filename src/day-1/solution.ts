@@ -1,7 +1,18 @@
-import { splitColumns } from './utils';
+import { DATA } from './data';
 
 export function solutionPart1(): number {
-  const { column1, column2 } = splitColumns();
+  const lines = DATA.trim().split(/\s+/).filter(Boolean).map(Number);
+  const COLUMN_1: number[] = [];
+  const COLUMN_2: number[] = [];
+
+  for (let i = 0; i < lines.length; i += 2) {
+    COLUMN_1.push(lines[i]);
+    COLUMN_2.push(lines[i + 1]);
+  }
+
+  const column1 = new Int32Array(COLUMN_1);
+  const column2 = new Int32Array(COLUMN_2);
+
   column1.sort();
   column2.sort();
   let sum = 0;
@@ -15,28 +26,25 @@ export function solutionPart1(): number {
 }
 
 export function solutionPart2(): number {
-  const { column1, column2 } = splitColumns();
+  const lines = DATA.trim().split(/\s+/).filter(Boolean).map(Number);
+  const COLUMN_1: number[] = [];
+  const COLUMN_2: Map<number, number> = new Map();
 
-  const column2Map: Map<number, number> = column2.reduce(
-    (acc: Map<number, number>, val: number) => {
-      const curVal = acc.get(val);
+  for (let i = 0; i < lines.length; i += 2) {
+    COLUMN_1.push(lines[i]);
 
-      if (curVal) {
-        acc.set(val, curVal + 1);
-      } else {
-        acc.set(val, 1);
-      }
+    if (!COLUMN_2.get(lines[i + 1])) COLUMN_2.set(lines[i + 1], 1);
+    else COLUMN_2.set(lines[i + 1], COLUMN_2.get(lines[i + 1])! + 1);
+  }
 
-      return acc;
-    },
-    new Map(),
-  );
+  const column1 = new Int32Array(COLUMN_1);
 
   let sum = 0;
 
   for (let index = 0; index < column1.length; index++) {
-    sum += column1[index] * (column2Map.get(column1[index]) || 0);
+    sum += column1[index] * (COLUMN_2.get(column1[index]) || 0);
   }
 
   return sum;
 }
+
