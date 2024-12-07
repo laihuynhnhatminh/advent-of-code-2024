@@ -48,7 +48,7 @@ export function solutionPart2() {
 
       return Number(v);
     })
-    .filter(v => !Number.isNaN(v))
+    .filter((v) => !Number.isNaN(v))
     .reduce((acc: number, _val, index, arr) => {
       if (index % 2 === 1) return acc;
 
