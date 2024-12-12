@@ -81,6 +81,10 @@ export function improvedSolution1() {
 const newWord = 'MAS';
 const reverseWord = 'SAM';
 
+/**
+ * Is this better? Don't know. It does traverse but doesn't seem to be better than my solution.
+ * I did learn a bit about grid traverse algorithm in this case.
+ */
 export function improvedSolution2() {
   const rows = grid.length;
   const cols = grid[0].length;
