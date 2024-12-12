@@ -21,9 +21,9 @@ function isXMASWithoutX(
   d: string,
   e: string,
 ): boolean {
-  if (c !== 'A') return false;
-  if (a === 'A' || b === 'A' || d === 'A' || e === 'A') return false;
-  
+  if (a === 'A' || b === 'A' || d === 'A' || e === 'A' || c !== 'A')
+    return false;
+
   return (
     (`${a}${c}${e}` === 'MAS' || `${a}${c}${e}` === 'SAM') &&
     (`${b}${c}${d}` === 'MAS' || `${b}${c}${d}` === 'SAM')
@@ -44,11 +44,11 @@ function isXMASWithoutX(
  * Not sure if this is a proper way to handle this. Looks more like a brute force method :)
  * To be fair I used other solution from other people online to test if my calculation was correct or not.
  * When I look at it is a O(n^2) loop so it is quite slow -> a full run loop inside another full run loop.
- * 
+ *
  * Function run at O(n^2) for the word themselves
  *
  * Improve function in improve-solution.ts => run much faster, take only half of the time even in very big DATA.
- * 
+ *
  */
 export function solutionPart1() {
   let count = 0;

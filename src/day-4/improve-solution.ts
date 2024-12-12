@@ -10,7 +10,7 @@
  *
  * x as the col length
  * y as the row length
- * 
+ *
  * Function run at O(n * m)
  */
 
@@ -55,8 +55,8 @@ export function improvedSolution1() {
         nx < 0 ||
         ny < 0 ||
         nx >= rows ||
-        ny >= rows ||
-        (grid[nx][ny] !== word[k])
+        ny >= cols ||
+        grid[nx][ny] !== word[k]
       ) {
         return false;
       }
@@ -78,15 +78,12 @@ export function improvedSolution1() {
   return count;
 }
 
+const newWord = 'MAS';
+const reverseWord = 'SAM';
 
 export function improvedSolution2() {
   const rows = grid.length;
   const cols = grid[0].length;
-  const directions = [
-    [1, -1],
-    [1, 1],
-  ];
-
   let count = 0;
 
   const checkDirection = (
@@ -104,8 +101,8 @@ export function improvedSolution2() {
         nx < 0 ||
         ny < 0 ||
         nx >= rows ||
-        ny >= rows ||
-        (grid[nx][ny] !== word[k])
+        ny >= cols ||
+        grid[nx][ny] !== word[k]
       ) {
         return false;
       }
@@ -116,10 +113,17 @@ export function improvedSolution2() {
 
   for (let i = 0; i < rows; i++) {
     for (let j = 0; j < cols; j++) {
-      for (const direction of directions) {
-        if (checkDirection(i, j, direction[0], direction[1], word)) {
-          count++;
-        }
+      if (
+        (checkDirection(i, j, 1, 1, newWord) &&
+          checkDirection(i, j + 2, 1, -1, reverseWord)) ||
+        (checkDirection(i, j, 1, 1, reverseWord) &&
+          checkDirection(i, j + 2, 1, -1, newWord)) ||
+        (checkDirection(i, j, 1, 1, newWord) &&
+          checkDirection(i, j + 2, 1, -1, newWord)) ||
+        (checkDirection(i, j, 1, 1, reverseWord) &&
+          checkDirection(i, j + 2, 1, -1, reverseWord))
+      ) {
+        count++;
       }
     }
   }
